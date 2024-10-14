@@ -7,14 +7,15 @@ my_group = [{"name": "Jill", "age": 26, "job": "biologist"},
             {"name": "John", "age": 27, "job": "writer"},
             {"name": "Nash", "age": 34, "job": "landlord"}]
 
-all_people = [person["name"] for person in my_group]
 # print(all_people)
 
 def add_relationship(person_1, person_2, relationship):
+    all_people = [person["name"] for person in my_group]
+
     if (person_1 not in all_people):
-        all_people.append({"name": person_1})
+        my_group.append({"name": person_1})
     if (person_2 not in all_people):
-        all_people.append({"name": person_2})
+        my_group.append({"name": person_2})
 
     for people in my_group:
         if (people["name"] == person_1):
